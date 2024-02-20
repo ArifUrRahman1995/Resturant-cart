@@ -1,0 +1,50 @@
+.megamenu {
+    margin-top: 5px;
+    position: absolute;
+    top: 100%; /* Position the Megamenu below the Navbar item */
+    left: -300px;
+    background-color: #07021a; /* Set background color */
+    border: 1px solid #092074; /* Add border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    padding: 10px; /* Add padding for content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    z-index: 1;
+}  
+.row {
+    display: flex;
+}
+
+.menu-item {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+  .megamenu h3 {
+    margin: 0 0 10px; /* Add margin below the heading */
+    font-size: 16px; /* Adjust font size */
+    color: #ffffff; /* Set text color */
+  }
+  
+  .megamenu ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex;
+  }
+  
+  .megamenu ul li {
+    margin-bottom: 5px; /* Add margin between menu items */
+    color: white;
+  }
+  
+  .megamenu ul li a {
+    display: block; /* Make menu items block-level for easy styling */
+    padding: 8px 0; /* Add padding to menu items */
+    color: #ffffff; /* Set text color */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .megamenu ul li a:hover {
+    color: #ee2323; /* Change text color on hover */
+  }

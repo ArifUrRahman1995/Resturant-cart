@@ -1,0 +1,210 @@
+/* Menu.module.css */
+
+.foodCard {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.foodImage {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin: auto; /* Center the image horizontally */
+}
+
+.cardButtons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.cardButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cardButton:hover {
+  background-color: #ddd;
+}
+
+.cart {
+  margin-top: 20px;
+}
+
+.cart h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart li {
+  margin-bottom: 5px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Align items to start and end */
+  padding: 20px; /* Add padding to the container */
+}
+
+.foodItems {
+  width: 80%; /* Occupy 70% of the container width */
+  display: flex;
+  flex-wrap: wrap; /* Allow food items to wrap to the next line */
+}
+
+.foodCard {
+   /* Three cards per row for laptop screens with 20px margin */
+  margin: 0 10px 20px 0; /* Adjust margin between cards */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative; /* Add position relative */
+  height: 300px; 
+  background-color: #d8d6d6;
+}
+
+.cardButtons {
+  display: none;
+  position: absolute;
+  bottom: 0; /* Align buttons to the bottom of the card */
+  width: 100%; /* Make buttons container full width */
+  padding: 10px;
+  background-color: transparent;
+}
+
+.foodCard:hover .cardButtons {
+  display: flex; /* Show buttons on hover */
+  justify-content: space-between; /* Distribute buttons evenly */
+}
+
+.cardButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cardButton:hover {
+  background-color: #ddd;
+}
+.cardContent {
+  padding: 10px;
+}
+
+.foodInfo {
+  text-align: center; /* Center align name and price */
+}
+
+.foodInfo h3 {
+  margin: 5px 0;
+}
+
+.foodInfo p {
+  margin: 0;
+}
+.deleteIcon {
+  color: red;
+}
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cartItemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteIcon {
+  cursor: pointer;
+}
+
+.totalPrice {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: red;
+}
+.titleContainer {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}.overlayIcons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  visibility: hidden; /* Initially hidden */
+}
+
+/* Show overlayIcons when hovering over foodCard */
+.foodCard:hover .overlayIcons {
+  visibility: visible;
+}
+.overlayIcons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: transparent; /* Semi-transparent background */
+  visibility: hidden; /* Initially hidden */
+}
+
+/* Add styles for individual icons */
+.overlayIcons a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #f61d1d; /* Gray background color */
+  border-radius: 50%; /* Make the icons round */
+}
+.overlayIcons a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: rgb(255, 255, 255); /* Gray background color */
+  border-radius: 50%; /* Make the icons round */
+	transition: all, 0.3s;
+}
+
+/* Add hover effect */
+.overlayIcons a:hover {
+  color: white;
+  background-color: rgb(0, 43, 128);
+  transform: rotate(360deg); /* Scale the icon to 110% on hover */
+}
+
+@media (max-width: 768px) {
+  .foodCard {
+    width: 100%; /* One card per row for mobile devices */
+    margin: 0;
+  }
+}

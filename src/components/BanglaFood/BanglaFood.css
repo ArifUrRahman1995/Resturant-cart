@@ -1,0 +1,71 @@
+button {
+    
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #e6e4da, #ffffff);
+    box-shadow: 6px 6px 10px #cfcdc4, -6px -6px 10px #ffffff;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: linear-gradient(145deg, #ceccc0, #cfc8c8); /* Darker Green */
+  }
+
+  .order {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    position: relative; /* Make the parent container for positioning */
+  }
+  
+  .price{
+    position: relative;
+    top: 0;
+    right: 0;
+    background: #f2eeee;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    
+    
+  }
+  
+  .AddToCart {
+    margin-top: auto; /* Push the button to the bottom */
+    background: #f2eeee;
+    color: rgb(35, 2, 2);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+    align-items:baseline;
+    margin-top: 20px;
+  }
+  
+  .cartButton:hover {
+    background-color: #0056b3;
+  }
+  .menu-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .menu-buttons button {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .menu-buttons button.active {
+    border-bottom: 2px solid red;
+  }
