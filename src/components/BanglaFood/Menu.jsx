@@ -11,18 +11,20 @@ import breakfast1 from "../../assets/food1.png";
 import breakfast2 from "../../assets/food3.png";
 import breakfast3 from "../../assets/food2.png";
 
-const Menu = ({ activeMenu }) => {
+const Menu = ({ activeMenu, onCartUpdate }) => {
   const [cartItems, setCartItems] = useState([]);
   const [detailsVisible, setDetailsVisible] = useState(Array(10).fill(false)); // Assuming max 10 items in the cart
 
   const addToCart = (item) => {
     setCartItems([...cartItems, item]);
+    updateCartContent();
   };
 
   const removeFromCart = (index) => {
     const updatedCart = [...cartItems];
     updatedCart.splice(index, 1);
     setCartItems(updatedCart);
+    updateCartContent();
   };
 
   const toggleDetails = (index) => {
@@ -33,6 +35,11 @@ const Menu = ({ activeMenu }) => {
 
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => total + item.price, 0);
+  };
+
+  const updateCartContent = () => {
+    const totalPrice = getTotalPrice();
+    onCartUpdate(cartItems, totalPrice);
   };
 
   const FoodCard = ({ image, name, price, index }) => (
